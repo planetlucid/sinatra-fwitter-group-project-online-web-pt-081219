@@ -1,0 +1,8 @@
+  
+<h1>Welcome, <%= current_user.username %>!</h1>
+<br />
+<% @tweets.each do |tweet| %>
+<% if tweet.user_id == current_user.id %>
+<p><%= tweet.content %></p>
+<% end %>
+<% end %>
